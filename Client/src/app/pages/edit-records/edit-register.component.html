@@ -1,0 +1,33 @@
+
+ <form [ngStyle]="{'margin-top': '72px'}">
+    <mat-grid-list  cols="1" rowHeight="90" gutterSize="1">
+
+        <mat-grid-tile [ngStyle]="{'margin-top': '25px'}"><h2>{{title}}</h2></mat-grid-tile>
+   <mat-grid-tile> <mat-form-field >
+      <mat-label>Customer name</mat-label>
+      <input required name="customerName" [(ngModel)]="record.customer" [ngModelOptions]="{standalone: true}" type="text" matInput>
+    </mat-form-field></mat-grid-tile>
+    
+    <mat-grid-tile><mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input required name="phone" type="text" [(ngModel)]="record.phone" [ngModelOptions]="{standalone: true}" matInput>
+      </mat-form-field></mat-grid-tile>
+      
+      <mat-grid-tile><mat-form-field appearance="fill">
+        <mat-label>Repair</mat-label>
+        <textarea required name="repairs" [(ngModel)]="record.repairs" [ngModelOptions]="{standalone: true}" matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5"></textarea>
+      </mat-form-field></mat-grid-tile>
+      
+      
+      <mat-grid-tile [ngStyle]="{'margin-top': '-25px','color': 'rgb(255,0,0)'}"><p>{{message}}</p></mat-grid-tile>
+      <mat-grid-tile [ngStyle]="{'margin-top': '-75px'}"><button (click)="save()" [ngStyle]="{'background': 'rgb(63,173,112)','color': 'rgb(255,255,255)'}" type="submit" mat-raised-button extended>{{button}}</button></mat-grid-tile>
+    
+    </mat-grid-list>
+    </form>
+
+   
+

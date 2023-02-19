@@ -1,0 +1,26 @@
+
+<div>
+<mat-grid-list [ngStyle]="{'margin-top': '75px'}" cols="1" rowHeight="90" gutterSize="1">
+    <mat-grid-tile><mat-icon [ngStyle]="{'font-size': '35px', 'width': '35px', 'height': '35px'}" fontIcon={{icon}}></mat-icon></mat-grid-tile>
+    <mat-grid-tile ><h2 [ngStyle]="{'font-size': '30px', 'text-align': 'center', 'font-weight': '500', 'margin-top': '-50px'}">{{title}}</h2></mat-grid-tile>
+  </mat-grid-list>
+
+ <form (submit)="send()" [ngStyle]="{'margin-top': '-45px'}">
+    <mat-grid-list  cols="1" rowHeight="90" gutterSize="0">
+   <mat-grid-tile> <mat-form-field > 
+      <mat-label>Username</mat-label>
+      <input required name="username" [(ngModel)]="userInfo.name" [ngModelOptions]="{standalone: true}" type="text" matInput>
+    </mat-form-field></mat-grid-tile>
+    
+    <mat-grid-tile><mat-form-field>
+        <mat-label>Password</mat-label>
+        <input name="password"  required [(ngModel)]="userInfo.pass" [ngModelOptions]="{standalone: true}" type="password" matInput>
+      </mat-form-field></mat-grid-tile>
+
+      <mat-grid-tile [ngStyle]="{'margin-top': '-40px','color': 'rgb(255,0,0)'}"><p>{{message}}</p></mat-grid-tile>
+
+      <mat-grid-tile [ngStyle]="{'margin-top': '-75px'}"><button color="primary" type="submit" mat-fab extended>{{button}}</button></mat-grid-tile>
+    </mat-grid-list>
+    </form>
+    
+  </div>

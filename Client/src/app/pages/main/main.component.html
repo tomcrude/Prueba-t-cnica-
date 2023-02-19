@@ -1,0 +1,11 @@
+
+<div>
+  <mat-grid-list [ngStyle]="{'margin-top': '225px'}" cols="2" rowHeight="90px" gutterSize="25">
+    <mat-grid-tile colspan="2"><h1 [ngStyle]="{'font-size': '65px', 'text-align': 'center', 'font-weight': '600'}" [ngStyle.xs]="{'font-size': '35px','text-align': 'center'}">Welcome to phone repair!</h1></mat-grid-tile>
+    <mat-grid-tile><a mat-fab extended [ngStyle.xs]="{'margin-right': '-45%'}" [ngStyle]="{'margin-right': '-75%'}" color="primary" href="/signUp">Sign up</a></mat-grid-tile>
+    <mat-grid-tile><a mat-fab extended [ngStyle.xs]="{'margin-right': '45%'}" [ngStyle]="{'margin-right': '75%'}" color="primary" href="/signIn">Sign in</a></mat-grid-tile>
+  </mat-grid-list>
+
+  <app-footer></app-footer>
+</div>
+  

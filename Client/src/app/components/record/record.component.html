@@ -1,0 +1,13 @@
+
+    <mat-grid-list class={{class}} [ngStyle]="{'font-weight': weight,'border-top': line,'margin': '30px','margin-top': '30px'}" cols="5" rowHeight="80px" gutterSize="25">
+        <mat-grid-tile><mat-icon [ngStyle]="{'margin-bottom': '15px','font-size': '35px', 'width': '35px', 'height': '35px'}" fontIcon={{icon}}/></mat-grid-tile>
+        <mat-grid-tile><p>{{customerName}}</p></mat-grid-tile>
+        <mat-grid-tile><p>{{phone}}</p></mat-grid-tile>
+        <mat-grid-tile [colspan]="" [ngStyle]="{'overflowX': overflow,'transform': 'translateY(7px)','width': '100vh'}"><p>{{repairs}}</p></mat-grid-tile>     
+        <mat-grid-tile><p>{{date}}</p></mat-grid-tile>
+        <div [ngStyle.sm]="{'transform': 'translateY(50px)','margin': '6px'}" [ngStyle.xs]="{'transform': 'translateY(50px)','margin': '6px'}" [ngStyle.md]="{'transform': 'translateY(50px)','margin': '6px'}">
+        <button (click)="delete()" class={{state}} mat-icon-button title="Delete"><mat-icon>delete</mat-icon> </button>
+        <a class={{state}} href='../edit-create/records/{{id}}' mat-icon-button title="Edit"><mat-icon>border_color</mat-icon></a>
+    </div>
+      </mat-grid-list>
+  

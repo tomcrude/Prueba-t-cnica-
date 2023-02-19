@@ -1,0 +1,20 @@
+
+<header>
+  <button (click)="logOut()" [ngStyle]="{'margin': '25px'}" mat-icon-button title="Log out"> <mat-icon [ngStyle]="{'transform': 'translateY(-4px)','font-size': '35px','width': '35px', 'height': '35px'}" fontIcon="logout"/> </button>
+</header>
+
+<div>
+<h2 [ngStyle.xs]="{'margin-left': '30px','font-size': '35px','display':'inline-block'}" [ngStyle.sm]="{'margin-left': '55px','font-size': '40px','display':'inline-block'}" [ngStyle]="{'margin-left': '55px','font-size': '55px','display':'inline-block'}">WELCOME {{user}}!</h2>
+<a [ngStyle]="{'margin-left':'5%', 'transform':'translateY(-10px)','font-size':'17px' }" [ngStyle.xs]="{'margin-left':'5%','margin-bottom':'-5%', 'transform':'translateY(-10px)','font-size':'17px' }" mat-flat-button extended href="/edit-create/records/0"> <mat-icon>add</mat-icon>Create record</a>
+
+  <app-record [overflow]="'hidden'" [state]="'inactive'" [weight]="'900'" [icon]="'stay_primary_portrait'" [line]="'1px solid rgb(140,140,140)'" [class]="'e'" />
+  
+  <app-record *ngFor="let info of records" [customerName]="info.customer" [phone]="info.phone" [date]="info.datee.split('T')[0]" [repairs]="info.repairs" [id]="info.id" />
+</div>
+
+
+  
+
+  
+
+
