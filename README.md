@@ -3,9 +3,9 @@
 
 Para iniciar el proyecto descarga el archivo zip o clónalo desde la consola de desarrollador.
 
-Ingresa a Client y pon el comando "npm i" y luego "ng serve".
+Ingresa a Client(es importante que pongas la mayúscula inicial) y pon el comando "npm i", luego "ng serve".
 
-Ingresa a Server y pon el comando "npm i" y después "npm start".
+Ingresa a Server(es importante que pongas la mayúscula inicial) y pon el comando "npm i", después "npm start".
 
 El servidor se inicia en el puerto 4000 y el cliente en el 4200.
 
