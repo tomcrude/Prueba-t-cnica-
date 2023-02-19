@@ -1,1 +1,40 @@
-hola
+
+¡Hola!
+
+Para iniciar el proyecto descarga el archivo zip o clónalo desde la consola de desarrollador.
+
+Ingresa a Client y pon el comando "npm i" y luego "ng serve".
+
+Ingresa a Server y pon el comando "npm i" y después "npm start".
+
+El servidor se inicia en el puerto 4000 y el cliente en el 4200.
+
+Como base de datos, use un servicio gratuito (Planetscale), por si por algún motivo no te llegan a aparecer las variables de entorno en
+la base de datos, reemplaza:
+
+\Server\src\dataBase
+
+var pool  = mysql.createPool({
+    connectionLimit : 50,
+    host: config.host,
+    database: config.database,
+    user: config.user,
+    password: config.password,
+    ssl:{
+      rejectUnauthorized: false
+    }
+  });
+
+por:
+
+var pool  = mysql.createPool({
+    connectionLimit : 50,
+    host: "us-east.connect.psdb.cloud",
+    database: "appdb",
+    user: "38w8c9cu5oow16qt8i7y",
+    password: "pscale_pw_7Sk7HHBk8NAlLJEpumQqfd59avbLrhnhJGsLt30U0Vl",
+    ssl:{
+      rejectUnauthorized: false
+    }
+  });
+
