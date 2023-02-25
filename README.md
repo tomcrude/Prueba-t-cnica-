@@ -1,6 +1,20 @@
 
 ¡Hola!
 
+!!!Importante!!!:
+
+// Prácticamente no use clases para dar los estilos CSS, si no que use estilos en línea ya que es un proyecto pequeño.
+// No es una página SPA(Single Page Application) por lo cual no use RouterLink ni Unsuscribe, pero si debo hacerlo, puedo hacerlo tranquilamente.
+// Tampoco use Guard(para proteger las rutas) y PWA, más que nada por falta de tiempo, ya que actualmente trabajo.
+// Luego ordene las carpetas de manera sencilla, porque es un proyecto sinple, si no, lo hubiese ordenado de esta forma 
+        Auth:
+             Componentes.
+              Páginas.
+               Pipes.
+               Servicios.
+               Modelos.
+               Modulos.
+
 Para iniciar el proyecto descarga el archivo zip o clónalo desde la consola de desarrollador.
 
 Ingresa a Client(es importante que pongas la mayúscula inicial) y pon el comando "npm i", luego "ng serve".
